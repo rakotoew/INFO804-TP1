@@ -13,17 +13,17 @@ Le fichier Q3Viewer.pro permet de generer le makefile correspondant a cette part
 L'executable est Q3Viewer.\
 Il peut etre appele de la facon suivante:
 ```
-./Q3Viewer rcruiser.tri
+./Q3Viewer bunny258.tri
 ```
 
 ### Compression par découpage sur une grille régulière
 - [X] 4.2 Zipper et index d'une cellule
 - [X] 4.3 Compression sans replacement des sommets des triangles 
-- [ ] 4.4 Compression avec replacement des sommets des triangles
+- [X] 4.4 Compression avec replacement des sommets des triangles (Semble marcher mais ne donne exactement pas les memes resultats que ceux de l'enonce)
 
 Le fichier Q4Viewer.pro permet de generer le makefile correspondant a cette partie. \
 L'executable est Q4Viewer.\
 Il peut etre appele de la facon suivante:
 ```
-./Q4Viewer rcruiser.tri out.tri 100 100 100
+./Q4Viewer bunny258.tri out.tri 100 100 100
 ```
