@@ -17,8 +17,9 @@ Il peut etre appele de la facon suivante:
 ```
 
 ### Compression par découpage sur une grille régulière
-- [ ] 4.2 Zipper et index d'une cellule
-- [ ] 4.3 Compression sans replacement des sommets des triangles
+- [X] 4.2 Zipper et index d'une cellule
+- [X] 4.3 Compression sans replacement des sommets des triangles 
+- [ ] 4.4 Compression avec replacement des sommets des triangles
 
 Le fichier Q4Viewer.pro permet de generer le makefile correspondant a cette partie. \
 L'executable est Q4Viewer.\

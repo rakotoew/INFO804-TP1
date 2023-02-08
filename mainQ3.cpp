@@ -19,7 +19,6 @@ int main(int argc, char** argv)
     viewer.setWindowTitle("Viewer triangle soup");
     // Make the viewer window visible on screen.
     viewer.ptrSoup = &soup;
-    int i =1;
     viewer.show();
     // Run main loop.
     application.exec();

@@ -28,33 +28,29 @@ void Viewer::draw()
         glVertex3f(v1[0], v1[1], v1[2]);
         glVertex3f(v2[0], v2[1], v2[2]);
     }
+    glDisable(GL_COLOR_MATERIAL);
     glEnd();
 
     /**
-  float colorBronzeDiff[4] = { 0.8, 0.6, 0.0, 1.0 };
-  float colorRedDiff   [4] = { 1.0, 0.0, 0.0, 1.0 };
-  float colorGreenDiff [4] = { 0.0, 1.0, 0.0, 1.0 };
-  float colorBlueDiff  [4] = { 0.0, 0.0, 1.0, 1.0 };
-
-  // Draws triangles given by 3 vertices.
-  glBegin(GL_TRIANGLES);
-  glColor4fv(colorBronzeDiff);
-  glVertex3f( 0.0, 0.0, 0.0 );
-  glVertex3f( 1.0, 0.0, 0.0 );
-  glVertex3f( 0.0, 1.0, 0.0 );
-  glColor4fv(colorRedDiff);
-  glVertex3f( 1.0, 0.0, 0.0 );
-  glVertex3f( 0.0, 1.0, 0.0 );
-  glVertex3f( 0.0, 0.0, 1.0 );
-  glColor4fv(colorGreenDiff);
-  glVertex3f( 0.0, 0.0, 0.0 );
-  glVertex3f( 0.0, 1.0, 0.0 );
-  glVertex3f( 0.0, 0.0, 1.0 );
-  glColor4fv(colorBlueDiff);
-  glVertex3f( 0.0, 0.0, 0.0 );
-  glVertex3f( 1.0, 0.0, 0.0 );
-  glVertex3f( 0.0, 0.0, 1.0 );
-  glEnd();*/
+      // Draws triangles given by 3 vertices.
+      glBegin(GL_TRIANGLES);
+      glColor4fv(colorBronzeDiff);
+      glVertex3f( 0.0, 0.0, 0.0 );
+      glVertex3f( 1.0, 0.0, 0.0 );
+      glVertex3f( 0.0, 1.0, 0.0 );
+      glColor4fv(colorRedDiff);
+      glVertex3f( 1.0, 0.0, 0.0 );
+      glVertex3f( 0.0, 1.0, 0.0 );
+      glVertex3f( 0.0, 0.0, 1.0 );
+      glColor4fv(colorGreenDiff);
+      glVertex3f( 0.0, 0.0, 0.0 );
+      glVertex3f( 0.0, 1.0, 0.0 );
+      glVertex3f( 0.0, 0.0, 1.0 );
+      glColor4fv(colorBlueDiff);
+      glVertex3f( 0.0, 0.0, 0.0 );
+      glVertex3f( 1.0, 0.0, 0.0 );
+      glVertex3f( 0.0, 0.0, 1.0 );
+      */
 }
 
 //Convertit un Vecteur v en qglviewer::Vec

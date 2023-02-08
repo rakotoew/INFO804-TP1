@@ -12,6 +12,7 @@
 #include <vector>
 #include <string>
 #include <cmath>
+#include <map>
 
 //Classe Vecteur
 struct Vecteur {
@@ -54,6 +55,7 @@ struct TriangleSoup {
     std::vector<Triangle> triangles; // les triangles
     TriangleSoup() {}
     void read( std::istream& in );
+    void write(std::ostream& output);
     void boundingBox( Vecteur& low, Vecteur& up);
 };
 std::ostream& operator<<( std::ostream& out, TriangleSoup ts );
@@ -101,12 +103,40 @@ struct Index {
 std::ostream& operator<<( std::ostream& out, Index i );
 std::istream& operator>>( std::istream& in, Index& i );
 
+// Structure pour calculer le barycentre d'un ensemble de points.
+struct CellData {
+    Vecteur acc;
+    int nb;
+    // Crée un accumulateur vide.
+    CellData(): acc(), nb(0) {}
+    // Ajoute le point v à l'accumulateur.
+    void add( const Vecteur& v );
+    // Retourne le barycentre de tous les points ajoutés.
+    Vecteur barycenter() const;
+};
+
+
+
 //Classe TriangleSoupZipper
 struct TriangleSoupZipper {
     // Construit le zipper avec une soupe de triangle en entrée \a
     // anInput, une soupe de triangle en sortie \a anOutput, et un index \a size
     // qui est le nombre de cellules de la boîte découpée selon les 3 directions.
+    TriangleSoup _anInput;
+    TriangleSoup _anOutput;
+    Index size;
+    Vecteur low;
+    Vecteur cellSize;
+    Vecteur up;
+    // Stocke pour chaque cellule son barycentre.
+    std::map<Index, CellData> index2data;
     TriangleSoupZipper( const TriangleSoup& anInput, TriangleSoup& anOuput, Index size );
+    /// @return l'index de la cellule dans laquelle tombe \a p.
+    Index index( const Vecteur& p ) const;
+    /// @return le centroïde de la cellule d'index \a idx (son "centre").
+    Vecteur centroid( const Index& idx ) const;
+    void zip();
+    void advancedZip();
 };
 
 
