@@ -53,10 +53,10 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = Viewer.cpp \
-		main.cpp \
+		mainQ4.cpp \
 		Utils.cpp 
 OBJECTS       = Viewer.o \
-		main.o \
+		mainQ4.o \
 		Utils.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -135,7 +135,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		Q4viewer.pro Viewer.h \
 		Utils.h Viewer.cpp \
-		main.cpp \
+		mainQ4.cpp \
 		Utils.cpp
 QMAKE_TARGET  = Q4viewer
 DESTDIR       = 
@@ -319,7 +319,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents Viewer.h Utils.h $(DISTDIR)/
-	$(COPY_FILE) --parents Viewer.cpp main.cpp Utils.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents Viewer.cpp mainQ4.cpp Utils.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -373,9 +373,9 @@ Viewer.o: Viewer.cpp Viewer.h \
 		Utils.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Viewer.o Viewer.cpp
 
-main.o: main.cpp Viewer.h \
+mainQ4.o: mainQ4.cpp Viewer.h \
 		Utils.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainQ4.o mainQ4.cpp
 
 Utils.o: Utils.cpp Utils.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Utils.o Utils.cpp

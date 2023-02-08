@@ -1,0 +1,12 @@
+#Compiled files
+.o
+*.o
+
+#Makefile
+Makefile
+**/Makefile
+
+#IDEA
+.idea
+.idea/
+.idea/*

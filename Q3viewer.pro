@@ -13,7 +13,7 @@ QT     *= opengl xml
 # Noms de vos fichiers entete
 HEADERS = Viewer.h Utils.h
 # Noms de vos fichiers source (vous pouvez en mettre d'autres)
-SOURCES = Viewer.cpp main.cpp Utils.cpp
+SOURCES = Viewer.cpp mainQ3.cpp Utils.cpp
 
 ###########################################################
 # Commentez/decommentez selon votre config/systeme
